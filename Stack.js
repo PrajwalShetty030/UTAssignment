@@ -27,4 +27,11 @@ class Stack {
       return this.stackHead;
     }
   }
+  peek() {
+    if (this.stackHead == -1) {
+      console.log("Stack is empty ");
+    } else {
+      console.log(`The topmost element is ${this.arry[this.stackHead]}`);
+    }
+  }
 }
