@@ -1,21 +1,30 @@
 class Stack {
-  last;
+  stackHead;
   arry;
-  tol_size;
+  total_size;
 
   constructor(tol_size) {
     this.last = -1;
     this.arry = [];
-    this.tol_size = tol_size;
+    this.total_size = total_size;
   }
   push(element) {
-    if (this.last == this.tol_size - 1) {
+    if (this.last == this.total_size - 1) {
       console.log("Stack is full-Stack Overflow");
     } else {
       this.last += 1;
       this.arry[this.last] = element;
       console.log(`Item is pushed : ${element}`);
       return this.last;
+    }
+  }
+  pop() {
+    if (this.stackHead == -1) console.log("Stack underflow.");
+    else {
+      console.log(`element ${this.array[this.stackHead]} is being popped`);
+      this.stackHead = this.stackHead - 1;
+      console.log("Pop process ends ");
+      return this.stackHead;
     }
   }
 }
